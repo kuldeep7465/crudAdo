@@ -1,0 +1,16 @@
+﻿@model crud.Models.employee
+@{
+    ViewData["Title"] = "insert";
+}
+
+<form asp-action="insert" asp-controller="Home" method="post">
+    @Html.HiddenFor(x=>x.ID)
+    <labal>Name</labal>
+    @Html.TextBoxFor(x=>x.Name,new{@class="form-control col-lg-6"})
+    <labal>Email</labal>
+    @Html.TextBoxFor(x=>x.Email,new{@class="form-control col-lg-6"})
+    <labal>Mobile</labal>
+    @Html.TextBoxFor(x=>x.Mobile,new{@class="form-control col-lg-6"})
+    <button type="submit" class="btn btn-primary mt-2" >Submit</button>
+</form>
+
